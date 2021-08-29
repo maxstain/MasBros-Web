@@ -1,6 +1,7 @@
 div{
   background-color: rgb(255, 105, 130);
   height: 100%;
+  padding-top: 1rem;
 }
 
 a {
@@ -8,6 +9,7 @@ a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
+  font-size: 20px;
 }
 
 a:hover{
