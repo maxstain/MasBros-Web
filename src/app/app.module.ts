@@ -22,6 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
 import { HomeBodyComponent } from './components/home-body/home-body.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { HomeBodyComponent } from './components/home-body/home-body.component';
     BodyComponent,
     HomeHeaderComponent,
     HomeBodyComponent,
-    FilterPipe
+    FilterPipe,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
