@@ -1,0 +1,27 @@
+header {
+  background-color: pink;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.title {
+  color: white;
+}
+.title h1{
+  font-size: xx-large;
+  font-weight: bold;
+}
+.title span{
+  font-size: large;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links button{
+  margin: 10px;
+}

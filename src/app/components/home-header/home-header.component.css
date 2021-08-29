@@ -1,0 +1,26 @@
+header {
+  background-color: pink;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 62%;
+  color: white;
+}
+h1 {
+  font-size: xx-large;
+  font-weight: bold;
+}
+span {
+  font-weight: 500;
+}
+.container {
+  padding: 10rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+.links button{
+  margin: 12px;
+}

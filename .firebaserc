@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "masbros": {
+      "hosting": {
+        "MasBros-web": [
+          "masbros"
+        ]
+      }
+    }
+  }
+}

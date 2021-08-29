@@ -1,0 +1,32 @@
+<header>
+  <div class="title">
+    <h1>MasBros.Inc</h1>
+    <span>It's better with friends</span>
+  </div>
+  <div class="links">
+    <div *ngIf="router.url == '/home'">
+      <button mat-raised-button color="accent" routerLink="/dashboard">
+        Dashboard
+      </button>
+    </div>
+    <div *ngIf="router.url != '/home'">
+      <button mat-raised-button color="accent" routerLink="/home">
+        Home
+      </button>
+    </div>
+
+    <div *ngIf="(afAuth.user | async)">
+      <button mat-raised-button color="accent" (click)="logout()">Log out</button>
+    </div>
+    <div *ngIf="!(afAuth.user | async)">
+      <button mat-raised-button color="accent" routerLink="/signup">
+        Signup
+      </button>
+
+      <button mat-raised-button color="accent" routerLink="/login">
+        Login
+      </button>
+    </div>
+
+  </div>
+</header>

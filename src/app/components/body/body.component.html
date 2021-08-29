@@ -1,0 +1,20 @@
+<div class="container">
+  <table mat-table>
+    <thead>
+      <th mat-header-cell>ID</th>
+      <th mat-header-cell>Display Name</th>
+      <th mat-header-cell>Email</th>
+      <th mat-header-cell>Password</th>
+      <th mat-header-cell>Created At</th>
+    </thead>
+    <tbody>
+      <tr :key="user.key" *ngFor="let User of users">
+        <td mat-cell>{{ User.key }}</td>
+        <td mat-cell>{{ User.displayName }}</td>
+        <td mat-cell>{{ User.email }}</td>
+        <td mat-cell><input type="password" value="{{ User.password }}" disabled></td>
+        <td mat-cell>{{ User.createdAt }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
