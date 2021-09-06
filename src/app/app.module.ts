@@ -23,6 +23,8 @@ import { BodyComponent } from './components/body/body.component';
 import { HomeHeaderComponent } from './components/home-header/home-header.component';
 import { HomeBodyComponent } from './components/home-body/home-body.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { AppointmentsComponent } from './appointments/appointments.component';
+import { AppointmentsBodyComponent } from './components/appointments-body/appointments-body.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HomeHeaderComponent,
     HomeBodyComponent,
     FilterPipe,
-    SidebarComponent
+    SidebarComponent,
+    AppointmentsComponent,
+    AppointmentsBodyComponent
   ],
   imports: [
     BrowserModule,

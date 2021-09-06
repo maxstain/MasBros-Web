@@ -1,7 +1,9 @@
 div{
   background-color: rgb(255, 105, 130);
   height: 100%;
-  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 a {
