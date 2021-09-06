@@ -38,7 +38,6 @@ export class AuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password)
       .then(() => {
         console.log('Auth service: loginUser: success');
-        //this.router.navigator(['/dashboard']);
       })
       .catch(error => {
         console.log('Auth Service: Error...');
