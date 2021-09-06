@@ -4,14 +4,14 @@
       <th mat-header-cell>ID</th>
       <th mat-header-cell>Date</th>
       <th mat-header-cell>Time</th>
-      <th mat-header-cell>User</th>
+      <th mat-header-cell></th>
     </thead>
     <tbody>
       <tr :key="Appointment.key" *ngFor="let Appointment of appointments">
         <td mat-cell>{{ Appointment.key }}</td>
         <td mat-cell>{{ Appointment.Date }}</td>
         <td mat-cell>{{ Appointment.Time}}</td>
-        <td mat-cell>{{ Appointment.User}}</td>
+        <td mat-cell><button (click)="deleteAppointment">Delete</button></td>
       </tr>
     </tbody>
   </table>
