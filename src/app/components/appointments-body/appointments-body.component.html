@@ -13,7 +13,7 @@
         <td mat-cell>{{ Appointment.Date }}</td>
         <td mat-cell>{{ Appointment.Time}}</td>
         <td mat-cell> <img src="{{ Appointment.Photo }}"> {{ Appointment.Maker}}</td>
-        <td mat-cell><button (click)="deleteAppointment">Delete</button></td>
+        <td mat-cell><button mat-raised-button color="accent" (click)="deleteAppointment">Delete</button></td>
       </tr>
     </tbody>
   </table>
