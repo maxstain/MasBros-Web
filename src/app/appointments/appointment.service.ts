@@ -1,32 +1,29 @@
+import { Observable } from 'rxjs';
 import { Appointment } from './appointment';
-import { AngularFireList, AngularFireDatabase } from '@angular/fire/database';
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection, DocumentChangeAction } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppointmentService {
 
-  private dbPath = '/appointments';
-  appointmentsRef!: AngularFireList<Appointment>;
+  private dbPath = '/Appointments';
+  appointmentsRef!: AngularFirestoreCollection<Appointment>;
 
-  constructor(db: AngularFireDatabase) {
-    this.appointmentsRef = db.list(this.dbPath);
-  }
-
-  updateAppointment(key: string, value: any): Promise<void> {
-    return this.appointmentsRef.update(key, value);
+  constructor(db: AngularFirestore) {
+    this.appointmentsRef = db.collection(this.dbPath);
   }
 
   deleteAppointment(key: string): Promise<void> {
-    return this.appointmentsRef.remove(key);
+    return this.appointmentsRef.doc(key).delete();
   }
 
-  getAppointmentsList(): AngularFireList<Appointment> {
+  getAppointmentsList(): AngularFirestoreCollection<Appointment> {
     return this.appointmentsRef;
   }
 
-  deleteAll(): Promise<void> {
-    return this.appointmentsRef.remove();
-  }
+  /* deleteAll(): Promise<void> {
+    return this.appointmentsRef;
+  } */
 }

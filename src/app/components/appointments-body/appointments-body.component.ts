@@ -20,16 +20,19 @@ export class AppointmentsBodyComponent implements OnInit {
   }
 
   getAppointmentsList() {
-    this.appointmentsService.getAppointmentsList().snapshotChanges().pipe(
-      map(changes => changes.map(c => ({ key: c.payload.key, ...c.payload.val() })))
-    ).subscribe(appointments => {
-      this.appointments = appointments
+    this.appointmentsService.getAppointmentsList().snapshotChanges().subscribe(data => {
+      this.appointments = data.map(e => {
+        return {
+          id: e.payload.doc.id,
+          ...e.payload.doc.data()
+        } as Appointment
+      });
     });
   }
 
-  deleteAppointments() {
+  /* deleteAppointments() {
     this.appointmentsService.deleteAll().catch(err => console.log(err));
-  }
+  } */
 
   deleteAppointment() {
     this.appointmentsService.deleteAppointment(this.appointment.key).catch(
