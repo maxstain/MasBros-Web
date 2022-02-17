@@ -28,3 +28,9 @@ input {
   border: none;
   background-color: whitesmoke;
 }
+
+img {
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+}
